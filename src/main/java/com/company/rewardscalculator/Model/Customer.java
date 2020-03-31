@@ -1,4 +1,4 @@
-package com.example.service.springbootrewards.model;
+package com.company.rewardscalculator.Model;
 
 import java.util.Set;
 
@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 public class Customer {
 	@Id
 	@GeneratedValue
-	private Integer id;
+	private int id;
 	private String name;
 	@OneToMany(mappedBy="customer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Set<MyTransaction> transactions;
@@ -36,21 +36,27 @@ public class Customer {
 		this.name = name;
 	}
 	public Integer getId() {
+
 		return id;
 	}
 	public void setId(Integer id) {
+
 		this.id = id;
 	}
 	public String getName() {
+
 		return name;
 	}
 	public void setName(String name) {
+
 		this.name = name;
 	}
 	public Set<MyTransaction> getTransactions() {
+
 		return transactions;
 	}
 	public void setTransactions(Set<MyTransaction> transactions) {
+
 		this.transactions = transactions;
 	}
 	public Long getRewardPoints() {

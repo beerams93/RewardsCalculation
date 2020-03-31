@@ -1,37 +1,29 @@
-package com.example.service.springbootrewards.rewards;
+package com.company.rewardscalculator.Controller;
 
 import java.util.List;
 
+import com.company.rewardscalculator.Service.RewardsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
-import com.example.service.springbootrewards.model.Customer;
-import com.example.service.springbootrewards.model.MyTransaction;
+import com.company.rewardscalculator.Model.Customer;
 
-@CrossOrigin(origins="http://localhost:4200")
 @RestController
 public class RewardsController {
 
-	//@Autowired
-	//private RewardsServiceMock rewardsService;
 	
 	@Autowired
 	private RewardsService rewardsService;
 	
-	
-//	@GetMapping("/{idUser}/rewards")
-//	public List<MyTransaction> getAll(@PathVariable Integer idUser) {
-//		return rewardsService.getAll();
-//	}
+
 	
 	@GetMapping("/customers")
-	public List<Customer> findCustomerAll() {
-		return rewardsService.getCustomerAll();
+	public List<Customer> findAllCustomers() {
+		return rewardsService.getAllCustomers();
 	}
 	
 	@GetMapping("/customers/{id}")
