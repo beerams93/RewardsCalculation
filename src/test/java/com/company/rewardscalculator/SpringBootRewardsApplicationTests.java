@@ -1,4 +1,4 @@
-package com.example.service.springbootrewards;
+package com.company.rewardscalculator;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

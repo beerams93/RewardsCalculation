@@ -1,4 +1,4 @@
-package com.example.service.springbootrewards.model;
+package com.company.rewardscalculator.Model;
 
 import java.util.Date;
 
@@ -23,14 +23,16 @@ public class MyTransaction extends Reward{
 	private Customer customer;
 	private Double total;
 	private String description;
-	//@Temporal(TemporalType.DATE)
+
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date saveDate;
 	
 	
 	public MyTransaction() {
+
 		super();
 	}
+
 	public MyTransaction(Long id, Customer customer, Double total, String description, Date date) {
 		super();
 		this.id = id;
@@ -41,33 +43,43 @@ public class MyTransaction extends Reward{
 	}
 
 	public Date getSaveDate() {
+
 		return saveDate;
 	}
 	public void setSaveDate(Date saveDate) {
+
 		this.saveDate = saveDate;
 	}
 	public Long getId() {
+
 		return id;
 	}
 	public void setId(Long id) {
+
 		this.id = id;
 	}
 	public Customer getCustomer() {
+
 		return customer;
 	}
 	public void setCustomer(Customer customer) {
+
 		this.customer = customer;
 	}
 	public Double getTotal() {
+
 		return total;
 	}
 	public void setTotal(Double total) {
+
 		this.total = total;
 	}
 	public String getDescription() {
+
 		return description;
 	}
 	public void setDescription(String description) {
+
 		this.description = description;
 	}
 
@@ -81,8 +93,8 @@ public class MyTransaction extends Reward{
 		} 
 		
 		if (this.total > 100) {
-			this.points += 50;  //1 point for every dollar spent over $50
-			this.points += (this.total.intValue() - 100) * 2;  //2 points for every dollar spent over $100
+			this.points += 50;
+			this.points += (this.total.intValue() - 100) * 2;
 		}
 		
 		return this.points;

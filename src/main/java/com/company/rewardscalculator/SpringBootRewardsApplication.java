@@ -1,4 +1,4 @@
-package com.example.service.springbootrewards;
+package com.company.rewardscalculator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
